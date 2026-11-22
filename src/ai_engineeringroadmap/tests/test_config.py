@@ -23,3 +23,11 @@ def test_valid_settings(monkeypatch):
     assert settings.LLM_API_KEY.get_secret_value() == "test_key"
     assert settings.LLM_BASE_URL == "https://api.example.com/v1"
     assert settings.LOG_LEVEL == "INFO"  # Default value
+
+
+# adding a function to clear the cache for the stored settings values
+@pytest.fixture(autouse=True)
+def clear_cache():
+    from ai_engineeringroadmap.config.setings import get_settings
+    
+    get_settings.cache_clear()
