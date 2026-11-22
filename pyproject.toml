@@ -23,3 +23,11 @@ build-backend = "uv_build"
 dev = [
     "ruff>=0.17.5",
 ]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+# Defaults already cover Pyflakes (F) and core pycodestyle (E) rules.
+# extend-select adds more on top of them.
+extend-select = ["I", "UP", "B"]  # import sorting, pyupgrade, bugbear
