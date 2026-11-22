@@ -29,5 +29,5 @@ def test_valid_settings(monkeypatch):
 @pytest.fixture(autouse=True)
 def clear_cache():
     from ai_engineeringroadmap.config.setings import get_settings
-    
+
     get_settings.cache_clear()
