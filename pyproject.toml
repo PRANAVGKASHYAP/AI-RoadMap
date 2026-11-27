@@ -8,8 +8,10 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "httpx>=0.28.1",
     "pydantic-settings>=2.16.3",
     "pytest>=9.2.0",
+    "tenacity>=9.2.1",
 ]
 
 [project.scripts]
